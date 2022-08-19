@@ -1,9 +1,12 @@
-CREATE DATABASE customer
-
-Use [customer]
+Use [master]
 GO
 
-/* DROP DATABASE customer */
+CREATE DATABASE CustomerLib_Kundro
+
+Use [CustomerLib_Kundro]
+GO
+
+DROP DATABASE CustomerLib_Kundro
 
 CREATE TABLE [Customer]
 (
