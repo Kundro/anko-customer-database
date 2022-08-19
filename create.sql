@@ -33,11 +33,11 @@ AddressID int IDENTITY(1,1) NOT NULL PRIMARY KEY,
 CustomerID int NOT NULL FOREIGN KEY REFERENCES Customer(CustomerID),
 AddressLine nvarchar(100) NOT NULL,
 AddressLine2 nvarchar(100) NULL,
-AddressType nvarchar(13) NOT NULL,
+AddressType nvarchar(10) NOT NULL CHECK (AddressType IN ('Shipping', 'Billing')),
 City nvarchar(50) NOT NULL,
 PostalCode nvarchar(6) NOT NULL,
 State nvarchar(20) NOT NULL,
-Country nvarchar(30) NOT NULL
+Country nvarchar(30) NOT NULL CHECK (Country IN ('USA', 'United States', 'united states', 'Canada', 'canada'))
 )
 
 SELECT * FROM Address
@@ -47,5 +47,5 @@ TRUNCATE TABLE Address
 DROP TABLE Address
 
 /* Test PhoneNumber and Email */
-INSERT INTO Customer (LastName, PhoneNumber, Email, Notes) VALUES ('Kundro','+21231233213223','mail@mail.ru','note1')
-INSERT INTO Customer (LastName, PhoneNumber, Email, Notes) VALUES ('Kundro2','+22312332132112','mail@mail.ru','note2')
+INSERT INTO Customer (LastName, PhoneNumber, Email, Notes) VALUES ('surname1','+21231233213223','email@gmail.ru','note1')
+INSERT INTO Customer (LastName, PhoneNumber, Email, Notes) VALUES ('surname2','+22312332132112','email@gmail.ru','note2')
