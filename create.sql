@@ -6,7 +6,7 @@ CREATE DATABASE CustomerLib_Kundro
 Use [CustomerLib_Kundro]
 GO
 
-DROP DATABASE CustomerLib_Kundro
+/* DROP DATABASE CustomerLib_Kundro */
 
 CREATE TABLE [Customer]
 (
@@ -21,11 +21,13 @@ Notes nvarchar(MAX) NOT NULL,
 TotalPurchasesAmount money NULL,
 )
 
+/*
 SELECT * FROM Customer
 
 TRUNCATE TABLE Customer
 
 DROP TABLE Customer
+*/
 
 CREATE TABLE Addresses
 (
@@ -40,8 +42,10 @@ StateName nvarchar(20) NOT NULL,
 Country nvarchar(30) NOT NULL CHECK (Country IN ('USA', 'United States', 'united states', 'Canada', 'canada'))
 )
 
+/*
 SELECT * FROM Addresses
 
 TRUNCATE TABLE Addresses
 
 DROP TABLE Addresses
+*/

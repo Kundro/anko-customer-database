@@ -1,16 +1,10 @@
-Use [master]
-GO
-
-CREATE DATABASE CustomerLib_Kundro
-
 Use [CustomerLib_Kundro]
 GO
 
 /* Add correct Customer values */
-SELECT * FROM Customer
+/* SELECT * FROM Customer */
 
 INSERT INTO Customer (FirstName, LastName, PhoneNumber, Email, Notes, TotalPurchasesAmount) VALUES ('name1', 'surname1', '+21231233213223', 'email@gmail.ru', 'note1', '1')
-
 INSERT INTO Customer (LastName, PhoneNumber, Email, Notes) VALUES ('surname1', '+21231233213223', 'email@gmail.ru', 'note1')
 
 /* Incorrect phone number */
@@ -23,7 +17,7 @@ INSERT INTO Customer (LastName, PhoneNumber, Email, Notes) VALUES ('surname1', '
 
 
 /* Add correct Address values */
-SELECT * FROM Addresses
+/* SELECT * FROM Addresses */
 
 INSERT INTO Addresses (CustomerID, AddressLine, AddressLine2, AddressType, City, PostalCode, StateName, Country) VALUES (1, 'line1', 'line2', 'Shipping', 'Chicago', '60666', 'Illinois', 'USA')
 INSERT INTO Addresses (CustomerID, AddressLine, AddressType, City, PostalCode, StateName, Country) VALUES (1, 'line1', 'Shipping', 'Chicago', '60666', 'Illinois', 'USA')
