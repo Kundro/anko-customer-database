@@ -45,7 +45,3 @@ SELECT * FROM Address
 TRUNCATE TABLE Address
 
 DROP TABLE Address
-
-/* Test PhoneNumber and Email */
-INSERT INTO Customer (LastName, PhoneNumber, Email, Notes) VALUES ('surname1','+21231233213223','email@gmail.ru','note1')
-INSERT INTO Customer (LastName, PhoneNumber, Email, Notes) VALUES ('surname2','+22312332132112','email@gmail.ru','note2')
