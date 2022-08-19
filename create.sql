@@ -27,7 +27,7 @@ TRUNCATE TABLE Customer
 
 DROP TABLE Customer
 
-CREATE TABLE Address
+CREATE TABLE Addresses
 (
 AddressID int IDENTITY(1,1) NOT NULL PRIMARY KEY,
 CustomerID int NOT NULL FOREIGN KEY REFERENCES Customer(CustomerID),
@@ -36,12 +36,12 @@ AddressLine2 nvarchar(100) NULL,
 AddressType nvarchar(10) NOT NULL CHECK (AddressType IN ('Shipping', 'Billing')),
 City nvarchar(50) NOT NULL,
 PostalCode nvarchar(6) NOT NULL,
-State nvarchar(20) NOT NULL,
+StateName nvarchar(20) NOT NULL,
 Country nvarchar(30) NOT NULL CHECK (Country IN ('USA', 'United States', 'united states', 'Canada', 'canada'))
 )
 
-SELECT * FROM Address
+SELECT * FROM Addresses
 
-TRUNCATE TABLE Address
+TRUNCATE TABLE Addresses
 
-DROP TABLE Address
+DROP TABLE Addresses
