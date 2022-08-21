@@ -14,9 +14,11 @@ AS
 BEGIN
 	SET NOCOUNT ON;
 
-	INSERT INTO Customers(FirstName, LastName, PhoneNumber, Email, Notes, TotalPurchasesAmount)
+	INSERT INTO Customer(FirstName, LastName, PhoneNumber, Email, Notes, TotalPurchasesAmount)
 	VALUES (@FirstName, @LastName, @PhoneNumber, @Email, @Notes, @TotalPurchasesAmount)
 END
 GO
+
+DROP PROCEDURE CreateCustomer
 
 EXEC CreateCustomer @FirstName = 'name', @LastName = 'surname', @PhoneNumber = '+11234567891123', @Email = 'mail@mail.ru', @Notes = 'note1', @TotalPurchasesAmount = 1;

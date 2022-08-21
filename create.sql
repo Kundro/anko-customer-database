@@ -21,13 +21,12 @@ Notes nvarchar(MAX) NOT NULL,
 TotalPurchasesAmount money NULL,
 )
 
-/*
+
 SELECT * FROM Customer
 
 TRUNCATE TABLE Customer
 
 DROP TABLE Customer
-*/
 
 CREATE TABLE Addresses
 (

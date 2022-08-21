@@ -1,0 +1,17 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE SelectAddress 
+	@AddressID int
+
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT * FROM Addresses WHERE AddressID = @AddressID
+END
+GO
+
+EXEC SelectAddress @AddressID = '1'
